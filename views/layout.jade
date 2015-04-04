@@ -1,0 +1,36 @@
+//- layout.jade
+doctype html
+html(lang="en")
+  head
+    block title
+      title Question and Answer
+
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+
+    link(rel="shortcut icon", href="/images/favicon.ico", type="image/x-icon")
+    link(rel="icon", href="/images/favicon.ico", type="image/x-icon")
+    link(rel="stylesheet", href="/css/watson-bootstrap-dark.css")
+    link(rel="stylesheet", href="/css/browser-compatibility.css")
+    link(rel="stylesheet", href="/css/style.css")
+    block extrahead
+  body
+    div.container
+      div.header.row
+        div.col-lg-12
+          h2 Healthbuddy
+            | Ask any question about healthcare, and see what Watson has to say.
+            | Need an idea? Just click the microphone button and ask  
+            a(href="javascript:search('What are symptoms of Parkinsons disease?', true)") "What are symptoms of Parkinson's disease?"
+          
+    div.container
+      block row-content
+      
+   
+    script(type='text/javascript', src="/js/css_browser_selector.js")
+    script(type='text/javascript', src="/js/jquery-1.11.1.min.js")
+    script(type='text/javascript', src='/js/speech-recognizer.js')
+    script(type='text/javascript', src='/js/socket.io.js')
+    script(type='text/javascript', src="/js/demo.js")
+    script(type='text/javascript', src="/js/speech.js")
